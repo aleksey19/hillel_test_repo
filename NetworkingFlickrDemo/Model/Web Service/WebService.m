@@ -31,7 +31,7 @@
                              @"api_key" : FlickrAPIKey,
                              @"format" : @"json",
                              @"nojsoncallback" : @(1),
-                             @"extras" : @"url_t",
+                             @"extras" : @"url_t, url_l",
                              @"per_page" : @(10)
                              };
     [self GET:@""
