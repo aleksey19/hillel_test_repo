@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Owner" representedClassName="Owner" syncable="YES">
+        <attribute name="ownerID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="photo" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Photo" inverseName="owner" inverseEntity="Photo" syncable="YES"/>
+    </entity>
+    <entity name="Photo" representedClassName="Photo" syncable="YES">
+        <attribute name="ownerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlLarge" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlThumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Owner" inverseName="photo" inverseEntity="Owner" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Photo" positionX="-270" positionY="-189" width="128" height="133"/>
+        <element name="Owner" positionX="-63" positionY="26" width="128" height="73"/>
+    </elements>
+</model>
